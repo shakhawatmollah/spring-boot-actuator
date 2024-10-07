@@ -1,4 +1,4 @@
-package com.shakhawat.springbootactuator.validation;
+package com.shakhawat.springbootactuator.exception;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
