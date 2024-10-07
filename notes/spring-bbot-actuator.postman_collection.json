@@ -9,11 +9,26 @@
 		{
 			"name": "Create Department",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"shortName\": \"IT\",\r\n  \"name\": \"Information Technology Department\"\r\n}",
+					"raw": "{\r\n  \"shortName\": \"FIN\",\r\n  \"name\": \"Finance Department\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -38,11 +53,26 @@
 		{
 			"name": "Create Employee",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"code\": \"EMP003\",\r\n  \"firstName\": \"Tawfiq\",\r\n  \"lastName\": \"Mollah\",\r\n  \"age\": 18,\r\n  \"gender\": \"Male\",\r\n  \"address\": \"456 Elm St, Springfield\",\r\n  \"departmentId\": 3\r\n}",
+					"raw": "{\r\n  \"code\": \"EMP004\",\r\n  \"firstName\": \"Shakhawat\",\r\n  \"lastName\": \"Mollah\",\r\n  \"age\": 38,\r\n  \"gender\": \"Male\",\r\n  \"address\": \"123 Main St, Springfield\",\r\n  \"departmentId\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,6 +100,21 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -102,6 +147,21 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -132,8 +192,34 @@
 		{
 			"name": "Delete Department By ID",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -144,7 +230,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/departments/3",
+					"raw": "http://localhost:8080/api/departments/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -153,7 +239,7 @@
 					"path": [
 						"api",
 						"departments",
-						"3"
+						"5"
 					]
 				}
 			},
@@ -165,6 +251,21 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -187,6 +288,40 @@
 						"api",
 						"employees",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator Details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mgt-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mgt-details"
 					]
 				}
 			},
