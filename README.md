@@ -43,4 +43,4 @@ Spring Boot Actuator Project with Validation and Global Exception Handle
 
 Import Postman collection to quickly get started.
 
-[![Collection](https://run.pstmn.io/button.svg)](https://github.com/shakhawatmollah/spring-boot-actuator/blob/main/notes/spring-boot-actuator.postman_collection.json)
+[![Collection](https://run.pstmn.io/button.svg)](https://github.com/shakhawatmollah/spring-boot-actuator/blob/main/notes/spring-bbot-actuator.postman_collection.json)
